@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-image: url("./bg.jpg");
+            background-size: cover;
+        }
+        h2{
+            color:#D61355;
+            font-family:cursive;
+            margin: 20rem;
+            font-size:2.5rem;
+            word-spacing:.1rem;
+        }
+        .inputtext{
+            text-align: center;
+            margin-top: -20rem;
+        }
+        .inputtext input{
+            border:#FFAACF;
+            padding: 1rem 2rem;
+            background-color: #FFAACF;
+            border-radius:1rem;
+            color: #D61355;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            outline: none;
+            
+                       
+        }
+        .inputtext input:hover{
+            border: #FFAACF;
+        }
+        img{
+            width: 4%;
+            align-content: center;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            
+            padding: 10px;
+            margin:2rem;
+            color:#D61355;
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: sans-serif;
+
+            
+
+        }
+
+    </style>
+
+
+<h2 style="text-align: center;">Love Calculator</h2>
+<p id="cal"></p>
+<div class="inputtext">
+    <input type="text" placeholder="Enter Name" id="nameone">
+    <img src="./heart.png"><input type="text" placeholder="Enter Name" id="nametwo">
+</div>
+<a href="#" onclick="lov()">Calculate</a>
+<p id="print" style="text-align: center; font-size: 2rem; color: #D61355; font-family: sans-serif; letter-spacing: .2rem; word-spacing: .2rem;"></p>
+<script>
+    function lov(){
+var name1 = document.getElementById("nameone").value;
+var name2 = document.getElementById("nametwo").value;
+if(name1.length<=2){
+    alert("Enter atleast three character");
+}
+if(name2.length<=2){
+    alert("Enter atleast three character");
+}
+else{
+    var random = Math.floor(Math.random()*100);
+    document.getElementById("print").innerHTML = name1  +  "and"  +  name2 + "=" +random + "%" + "of love";
+}
+}
+</script>
+
+</body>
+</html> 
